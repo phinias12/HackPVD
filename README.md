@@ -44,3 +44,7 @@ Inspiring videos
 * [A Map to Perfection: Using D3.js to Make Beautiful Web Maps] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa)
 * [d3js and leaflet] (http://bl.ocks.org/sumbera/10463358 "d3 and leaflet")
 * [mapbox and leaflet youtube video] (https://www.youtube.com/watch?v=jRXaQC0jKcg "mapbox and leaflet yt tutorial")
+
+Project Summary
+---------------
+     Navigation is tough. Safe navigation is tougher. Whether you're a tourist or a local, our project for HackPVD allows for anyone to get a fast and easy-to-understand visual of the safest areas in Providence using the city's public complaint data API. On desktop or mobile, quickly view to see the areas with the most complaints and have the power to act accordingly. 
