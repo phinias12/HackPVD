@@ -25,3 +25,4 @@ Inspiring videos
 * [D3.js making beautiful web maps] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa "d3.js making beautifuk web apps")
 * [A Map to Perfection: Using D3.js to Make Beautiful Web Maps] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa)
 * [d3js and leaflet] (http://bl.ocks.org/sumbera/10463358 "d3 and leaflet")
+* [mapbox and leaflet youtube video] (https://www.youtube.com/watch?v=jRXaQC0jKcg "mapbox and leaflet yt tutorial")
