@@ -17,13 +17,14 @@ Codepen Collab Between the Team
 -------------------------------
 
 > ![alt text](https://blog.codepen.io/wp-content/uploads/2012/06/EditOn-Codepen.svg "CodePen logo")
-http://codepen.io/toklok/pen/BKxQvg
 
->[codepen collab mode](http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode")
+> Example: http://codepen.io/toklok/pen/BKxQvg
+
+> Collab mode: http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode"
 
 >CodePen Live
 ------------
->[codepen live view](http://codepen.io/toklok/live/BKxQvg "codpen live")
+>[codepen live view](http://codepen.io/toklok/live/BKxQvg 
 
 > note:CodePen.io is sort of like a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "REPL for ClojureScript") that is easy to iterate and see changes live.  
 
