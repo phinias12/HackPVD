@@ -13,7 +13,7 @@ http://codepen.io/toklok/pen/BKxQvg
 CodePen collaboration between the team
 =======================================
 
-![codepen collabe mode] (http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode")
+[codepen collabe mode](http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode")
 
 CodePen.io is sort of like a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "REPL for ClojureScript") that is easy to iterate and see changes live.  
 
