@@ -50,4 +50,3 @@ Project Summary
 ---------------
 Navigation is tough. Safe navigation is tougher. Whether you're a tourist or a local, our project for HackPVD allows for anyone to get a fast and easy-to-understand visual of the safest areas in Providence using the city's public complaint data API. On desktop or mobile, quickly view to see the areas with the most complaints and have the power to act accordingly. 
 
-- Trying to amp up your Resume's to impress colleges is a lot of work. Many times you don't know where to start. Our project will depict a visual of the towns and cities that have the most jobs and community service offered to the public. 
