@@ -1,0 +1,29 @@
+#map {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto 0 auto;
+}
+body{
+    background-color: #5E5E5E;
+    overflow-x: hidden;
+}      
+h1{
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+a{
+  color: #5E5E5E;
+}
+p{
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3em;
+}
+.theme{
+    color: #df873f;
+}
+#nav{
+  color: #5E5E5E;
+}
