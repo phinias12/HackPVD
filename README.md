@@ -1,6 +1,8 @@
 # HackPVD
 HackPVD Project
 
+[lodash deep](https://github.com/marklagendijk/lodash-deep "lodash deep")
+
 Using Open Data from [RI Data](]http://data.providenceri.com/, "providence data")
 ==================================================================================
 [Providence Open Data](https://data.providenceri.gov/dataset/PPD-Arrest-Log-Past-30-Days-HACKATHON/k6cx-967p, "data set")
