@@ -1,4 +1,4 @@
-# **Heatmaps to Promote Tourism, Safe Travel, and Safety: A HackPVD Project**
+# **A HackPVD Project**
 
 Project Summary
 ---------------
