@@ -14,6 +14,8 @@ CodePen collaboration between the team
 [codepen collabe mode](http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode")
 =====================================================================================
 
+[Lodash](https://lodash.com/docs "lodash")
+
 CodePen Live
 ------------
 [codepen live view](http://codepen.io/toklok/live/BKxQvg "codpen live")
