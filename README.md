@@ -17,7 +17,7 @@ CodePen collaboration between the team
 
 CodePen Live
 ------------
-[codepen live view](http://codepen.io/toklok/live/BKxQvg) "codpen live")
+[codepen live view](http://codepen.io/toklok/live/BKxQvg "codpen live")
 
 CodePen.io is sort of like a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "REPL for ClojureScript") that is easy to iterate and see changes live.  
 
