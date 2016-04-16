@@ -23,6 +23,5 @@ D3 Tutorials
 Inspiring videos
 * [Google Maps developer] (https://www.youtube.com/watch?v=wqPGFs0cqxI "Google I/O")
 * [D3.js making beautiful web maps] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa "d3.js making beautifuk web apps")
-* A Map to Perfection: Using D3.js to Make Beautiful Web Maps
-* [Toptal tutorial] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa)
+* [A Map to Perfection: Using D3.js to Make Beautiful Web Maps] (https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautifa)
 * [d3js and leaflet] (http://bl.ocks.org/sumbera/10463358 "d3 and leaflet")
