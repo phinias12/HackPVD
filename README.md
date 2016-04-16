@@ -26,6 +26,8 @@ Part of the technology we are going for is data driven map.
 Here are some links that are helpful for this project.
 =======================================================
 
+
+* [centering things in css] (https://css-tricks.com/centering-css-complete-guide/ "centering things in css")
 * [leaflet's documentation] (http://leafletjs.com/examples/quick-start.html "Leaflet documentation")
 D3 Tutorials
 * https://github.com/mbostock/d3/wiki/Tutorials
