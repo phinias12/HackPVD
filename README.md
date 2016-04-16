@@ -1,7 +1,10 @@
 # HackPVD
 HackPVD Project
 
-[Providence data set](https://data.providenceri.gov/dataset/PPD-Arrest-Log-Past-30-Days-HACKATHON/k6cx-967p, "data set")
+Using Open Data from [RI Data](]http://data.providenceri.com/, "providence data")
+==================================================================================
+[Providence Open Data](https://data.providenceri.gov/dataset/PPD-Arrest-Log-Past-30-Days-HACKATHON/k6cx-967p, "data set")
+-----
 
 ![alt text](https://blog.codepen.io/wp-content/uploads/2012/06/EditOn-Codepen.svg "CodePen logo")
 http://codepen.io/toklok/pen/BKxQvg
