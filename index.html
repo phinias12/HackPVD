@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Heatmap</title>
+        <!--Initialize jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!--Materialize CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <!--Override Stylesheet+Font Loading-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+        <script src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'></script>
+        <script src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js'></script>
+        <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/lodash-deep.js'></script>
+    </head>
+    <body>
+<div id="nav">
+  <div class="columns">
+    <ul class="tabs">
+      <li class="tab"><a href="#test1">Live Map</a></li>
+      <li class="tab"><a class="active" href="#test2">About</a></li>
+      <li class="tab"><a href="#test3">Meet the Team</a></li>
+      <li class="tab"><a href="#test4">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="test1" class="col s12">
+  <h1 class='center-align' id='topheader'>welcome to <span class='theme'><img style='display: inline-block; padding: 10px; bottom: 10px; position: relative;' src='http://www.gcpvd.org/wp-content/uploads/2015/02/square-p-01.png' width='100px' height='100px'> Providence.</span></h1>
+  <p style='color: white;' class='center-align'>
+    Navigation is tough. Safe navigation is tougher. Whether you're a tourist or a local, [catchy name here] allows for anyone to get a fast and easy-to-understand visual of the safest areas in Providence using the city's public complaint data API. On desktop
+    or mobile, quickly check to see the areas with the most complaints and have the power to act accordingly. It's that simple. The darker the area, the more complaints and/or arrests.
+  </p>
+  <div class="fixed-action-btn hide-on-large-only	" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large orange lighten-2" href='#topheader'>
+      <i class="large material-icons" style='font-size: 3em;'>keyboard_arrow_up</i>
+    </a>
+  </div>
+  <br>
+    <div id="map"></div>
+</div>
+<div id="test2" class="col s12">Test 2</div>
+<div id="test3" class="col s12">Test 3</div>
+<div id="test4" class="col s12">Test 4</div>
+
+
+<script>
+var data;
+var dataURL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/data.json';
+
+var map = new L.Map("map", {
+    center: [41.8240, -71.4128],
+    zoom: 13
+  })
+  .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
+
+d3.json("https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/data.json", function(error, json) {
+    
+    if (error) return console.warn(error);
+    data = json;
+    console.log(data);
+    
+  });
+
+/*_.forEach(data, function(value, key) {
+  console.log("in object", value[key])
+});
+*/
+
+_.deepMapValues(data, function(value, path){
+    console.log(path.value + ' is ' + value.path);
+});
+
+/*_.forEach(data), function(value, key) {
+      console.log("in object", value);
+  
+  _(value).forEach(function(value)){
+      console.log("in first array", value);
+    
+    _(value).forEach(function(value)){
+      console.log("in second array", value);
+      
+      _(value).forEach(function(value)){
+      console.log("in third array", value);
+        
+         _(value).forEach(function(value)){
+      console.log("in fourth array", value);
+           
+           });
+        
+         });
+      
+      });
+    
+  });
+}); */
+
+/*$(document).ready(function(){
+    $('ul.tabs').tabs();
+});*/
+</script>
+    </body>
+</html>
