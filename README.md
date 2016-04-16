@@ -38,8 +38,9 @@ Sources and References
 ----------------------
 > * [centering things in css] (https://css-tricks.com/centering-css-complete-guide/ "centering things in css")
 > * [leaflet's documentation] (http://leafletjs.com/examples/quick-start.html "Leaflet documentation")
-D3 Tutorials
-> * https://github.com/mbostock/d3/wiki/Tutorials
+
+> D3 Tutorials
+>> * https://github.com/mbostock/d3/wiki/Tutorials
 
 ##Inspiring videos
 >* [Google Maps developer] (https://www.youtube.com/watch?v=wqPGFs0cqxI "Google I/O")
