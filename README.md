@@ -20,7 +20,7 @@ Codepen Collab Between the Team
 
 > Example: http://codepen.io/toklok/pen/BKxQvg
 
-> Collab mode: http://codepen.io/toklok/collab/BKxQvg/ "codepen collab mode"
+> Collab mode: http://codepen.io/toklok/collab/BKxQvg/
 
 >CodePen Live
 ------------
