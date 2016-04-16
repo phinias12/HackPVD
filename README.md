@@ -18,7 +18,7 @@ Codepen Collab Between the Team
 
 > ![alt text](https://blog.codepen.io/wp-content/uploads/2012/06/EditOn-Codepen.svg "CodePen logo")
 
-> Example: http://codepen.io/toklok/pen/BKxQvg
+> Example: http://codepen.io/toklok/pen/YqLQPd
 
 > Collab mode: http://codepen.io/toklok/collab/BKxQvg/
 
