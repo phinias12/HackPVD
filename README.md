@@ -15,7 +15,7 @@ CodePen collaboration between the team
 =====================================================================================
 
 [Lodash](https://lodash.com/docs "lodash")
-[_filter](http://stackoverflow.com/questions/17096988/lodash-how-do-i-use-filter-when-i-have-nested-object "filter function)
+[_filter](http://stackoverflow.com/questions/17096988/lodash-how-do-i-use-filter-when-i-have-nested-object "filter function")
 
 CodePen Live
 ------------
