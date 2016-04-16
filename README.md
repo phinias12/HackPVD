@@ -26,7 +26,7 @@ Part of the technology we are going for is data driven map.
 How we populated the data to d3 for [Rhode Island Open Data](http://www.ri.gov/data/ "RI Open data")
 =====================================================================================================
 
-[d3 populate data](https://github.com/mbostock/d3/wiki/Requests "d3js populate data")
+[d3 populate data from Rhode Island](https://github.com/mbostock/d3/wiki/Requests "d3js populate data")
 ======================================================================================
 
 https://github.com/mbostock/d3/wiki/Requests
