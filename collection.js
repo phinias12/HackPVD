@@ -84,9 +84,18 @@ function mergeDimensionalArr (obj) {
 
 let immutableCollection = Immutable.Map(json);
 let immutableToJS = immutableCollection.toArray();
+let immutableFrom = Immutable.fromJS(json);
+
 
 const filePathImmutableJSON = '/Users/jcurtis/Desktop/immutableJSON';
-const objForImmutale = immutableToJS;
+const objForImmutale = immutableFrom;
+
+//Add in tests to assert this.
+
+console.log(Immutable.Map.isMap(immutableFrom));
+console.log(immutableFrom.getIn(["data", 0, 26, 1]));
+
+//Logs the latitude 41.787652
 
 writeSyncJsonFile(filePathImmutableJSON, objForImmutale);
 
@@ -94,12 +103,13 @@ function mergeImmutableDeep (coll) {
 
   let forJS = Immutable.fromJS(coll);
   let getNested = forJS.mergeDeep(forJS);
-  return getNested;
+
 }
 
 /* My settings would be.  const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
  * refactor this
-  * */
+*/
+
 const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
 
 function writeSyncJsonFile (file, obj) {
