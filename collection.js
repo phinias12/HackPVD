@@ -59,12 +59,14 @@ function removeUnwantedChar(arrayFilter) {
 
 function getLMapRequired (array, pushArr) {
   return array.forEach((element, index, value) => {
-    return array.filter(function (element) {
-
-    });
-    pushArr.push(element[26]);
+    //I'm at [array with some null and undefined], [array with some null and undefined], should I concat and flatten?
+    return [].filter(function() {});
   });
 }
+
+const deepFilter = _(immutableArray).omitBy(_.isUndefined).omitBy(_.isNull).value();
+
+console.log(deepFilter);
 
 function getLMapLatLng (immuteArray, pushArr) {
   return immuteArrayArray.forEach((element, index, value) => {
@@ -81,7 +83,7 @@ var removeZeros = function (arr) {
   });
 }
 
-console.log(removeZeros(immutableArray));
+//console.log(removeZeros(immutableArray));
 
 
 /* From the deepMap library https://www.npmjs.com/package/lodash-deep
