@@ -73,25 +73,23 @@ function flatten(arr) {
   }, []);
 }
 
-console.log(flatten(immutableArray));
-
-function flattenImmuteArray (array) {
-  return [].concat.apply([], array);
-}
-
-const deepFilter = _(immutableArray).omitBy(_.isUndefined).omitBy(_.isNull).value();
-
-function getLMapLatLng (immuteArray, pushArr) {
-  return immuteArray.forEach((element, index, value) => {
-  })
-}
-
-var removeZeros = function (arr) {
+function removeZeros (arr) {
   return arr.filter(function(element){
     if(element!==0){
       return element;
     }
   });
+}
+
+const finalProduct = removeZeros(flatten(immutableArray));
+
+const filePathForVals = '/Users/jcurtis/Desktop/newVal.json';
+
+writeSyncJsonFile(filePathForVals, finalProduct);
+
+function getLMapLatLng (immuteArray, pushArr) {
+  return immuteArray.forEach((element, index, value) => {
+  })
 }
 
 //console.log(removeZeros(immutableArray));
