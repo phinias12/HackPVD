@@ -16,7 +16,7 @@ _.mixin(require("lodash-deep"));
 *     ]
 *   ]
 * }
-*
+* super helpful because the data was a multi dimensional array.  http://stackoverflow.com/questions/10865025/merge-flatten-a-multidimensional-array-in-javascript
 * */
 
 //Break this out into seperate files
@@ -28,7 +28,7 @@ const data = './data.json';
 const json = loadJson.sync(data);
 
 //filtered pins will display on map.
-const filteredPins = turnIntoArray(deepMap(json));
+const filteredPins = mergeDimensionalArr(turnIntoArray(deepMap(json)));
 
 //adopted this idea from a popular framework.
 
@@ -63,9 +63,13 @@ function turnIntoArray(obj) {
   })
 }
 
+function mergeDimensionalArr (obj) {
+  return [].concat.apply([], obj);
+}
+
 //Should break this up into files and have an structure with es6 imports.
 
-
+console.log(store.riData[0]);
 
 //Break this out into structures next please.
 
