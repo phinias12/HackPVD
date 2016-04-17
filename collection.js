@@ -3,19 +3,43 @@
 const _ = require("lodash"),
   loadJson = require('load-json-file'),
   util = require('util'),
-  d3 = require("d3"),
   jsonfile = require('jsonfile');
 
 _.mixin(require("lodash-deep"));
 
+/* Dealing with a 2 dimensional array; ie
+*
+* https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/arrays2D.pdf
+*{
+*   [ riData: [
+*   data
+*     ]
+*   ]
+* }
+*
+* */
 
-const storeObj = store;
+//Break this out into seperate files
+
+//config.json
 const data = './data.json';
 
-//synchronous call
+//synchronous call to load json and store it as a variable.
 const json = loadJson.sync(data);
 
-//Currently not in use, atm.
+//filtered pins will display on map.
+const filteredPins = turnIntoArray(deepMap(json));
+
+//adopted this idea from a popular framework.
+
+const store = {
+  riData: filteredPins
+};
+
+
+const storeObj = store;
+
+//Currently not in use, atm, change.
 function mapMyObj () {
   _.forEach(json, function (value, key) {
     console.log(value, key);
@@ -23,7 +47,9 @@ function mapMyObj () {
 }
 
 
-// From the deepMap library https://www.npmjs.com/package/lodash-deep
+/* From the deepMap library https://www.npmjs.com/package/lodash-deep
+deepMap
+ */
 
 function deepMap(obj) {
   return _.deepMapValues(obj, function (value, path) {
@@ -39,18 +65,16 @@ function turnIntoArray(obj) {
 
 //Should break this up into files and have an structure with es6 imports.
 
-const filteredPins = turnIntoArray(deepMap(json));
+
+
+//Break this out into structures next please.
+
+
 
 /* My settings would be.  const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
  * refactor this
   * */
 const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
-const storeObj = store;
-
-const store = {
-  riData: filteredPins
-};
-
 
 function writeSyncJsonFile (file, obj) {
   return jsonfile.writeFileSync(file, obj, {spaces: 2});
