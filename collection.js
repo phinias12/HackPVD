@@ -3,13 +3,21 @@
 const _ = require("lodash"),
   loadJson = require('load-json-file'),
   util = require('util'),
-  jsonfile = require('jsonfile');
+  jsonfile = require('jsonfile'),
+  Immutable = require('immutable');
 
 _.mixin(require("lodash-deep"));
 
+
+
 /* Dealing with a 2 dimensional array; ie
 *
-* https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/arrays2D.pdf
+*
+* Learn a little bit about Immutable data and for manipulation.
+* https://facebook.github.io/immutable-js/
+*
+*
+* * https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/arrays2D.pdf
 *{
 *   [ riData: [
 *   data
@@ -69,11 +77,25 @@ function mergeDimensionalArr (obj) {
 
 //Should break this up into files and have an structure with es6 imports.
 
-console.log(store.riData[0]);
+//console.log(store.riData[0][26]);
 
 //Break this out into structures next please.
 
 
+let immutableCollection = Immutable.Map(json);
+let immutableToJS = immutableCollection.toArray();
+
+const filePathImmutableJSON = '/Users/jcurtis/Desktop/immutableJSON';
+const objForImmutale = immutableToJS;
+
+writeSyncJsonFile(filePathImmutableJSON, objForImmutale);
+
+function mergeImmutableDeep (coll) {
+
+  let forJS = Immutable.fromJS(coll);
+  let getNested = forJS.mergeDeep(forJS);
+  return getNested;
+}
 
 /* My settings would be.  const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
  * refactor this
