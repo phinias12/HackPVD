@@ -80,6 +80,26 @@ function removeZeros (arr) {
 const filePathForVals = '/Users/jcurtis/Desktop/newVal.json';
 const finalProduct = removeZeros(flatten(immutableArray));
 
+
+//Possibly make this immutable.
+
+let addressParsed = [];
+
+function getAddressParsed (array, pushToArr) {
+  return array.forEach(function (element, value, index) {
+
+    if (index[value].indexOf('address') == -1) {
+
+      pushToArr.push(index[value]);
+
+    }
+  })
+}
+
+getAddressParsed(finalProduct, addressParsed);
+console.log(addressParsed);
+
+//console.log(finalProduct[0]);
 writeSyncJsonFile(filePathForVals, finalProduct);
 
 //See where I am at.
