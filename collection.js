@@ -60,20 +60,31 @@ function removeUnwantedChar(arrayFilter) {
 function getLMapRequired (array, pushArr) {
   return array.forEach((element, index, value) => {
     //I'm at [array with some null and undefined], [array with some null and undefined], should I concat and flatten?
-    return [].filter(function() {});
+    //return [].concat.apply([], array);
+    pushArr.push(element[26])
   });
+}
+
+getLMapRequired(store.riData, immutableArray);
+
+function flatten(arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
+}
+
+console.log(flatten(immutableArray));
+
+function flattenImmuteArray (array) {
+  return [].concat.apply([], array);
 }
 
 const deepFilter = _(immutableArray).omitBy(_.isUndefined).omitBy(_.isNull).value();
 
-console.log(deepFilter);
-
 function getLMapLatLng (immuteArray, pushArr) {
-  return immuteArrayArray.forEach((element, index, value) => {
+  return immuteArray.forEach((element, index, value) => {
   })
 }
-
-getLMapRequired(store.riData, immutableArray);
 
 var removeZeros = function (arr) {
   return arr.filter(function(element){
