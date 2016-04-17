@@ -4,6 +4,23 @@ Project Summary
 ---------------
 Navigation is tough. Safe navigation is tougher. Whether you're a tourist or a local, our project for HackPVD allows for anyone to get a fast and easy-to-understand visual of the safest areas in Providence using the city's public complaint data API. On desktop or mobile, quickly view to see the areas with the most complaints and have the power to act accordingly. 
 
+Rhode Island Open data is a two dimensional array.
+[2d array](https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/arrays2D.pdf "2dimensional array")
+
+
+How to install on my own computer?
+==================================
+
++ [learn the command line](https://www.codecademy.com/learn/learn-the-command-line "use the cli")
++ [install nodejs](https://nodejs.org/en/download/ "nodejs")
+
+
+npm install
+-----------
+
+node collection.js
+--------------------
+
 Data Stream
 -----------
 > Using Open Data from [RI Data](]http://data.providenceri.com/, "providence data")
