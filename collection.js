@@ -27,7 +27,7 @@ _.mixin(require("lodash-deep"));
  * super helpful because the data was a multi dimensional array.  http://stackoverflow.com/questions/10865025/merge-flatten-a-multidimensional-array-in-javascript
  * */
 
-//Break this out into seperate files
+//Break this out into separate files
 
 //config.json
 const data = './data.json';
@@ -38,22 +38,12 @@ const json = loadJson.sync(data);
 //filtered pins will display on map.
 const filteredPins = mergeDimensionalArr(turnIntoArray(deepMap(json)));
 
-//adopted this idea from a popular framework.
-
 const store = {
   riData: filteredPins
 };
 
-
-const storeObj = store;
-
 //not immutable yet.
 let immutableArray = [];
-
-
-function removeUnwantedChar(arrayFilter) {
-
-}
 
 //Currently the only thing that was ACTUALLY needed was a simple forEach loop.
 
@@ -65,14 +55,18 @@ function getLMapRequired (array, pushArr) {
   });
 }
 
+//Run function and push to immutableArray.
 getLMapRequired(store.riData, immutableArray);
 
+
+//Flatten function
 function flatten(arr) {
   return arr.reduce(function (flat, toFlatten) {
     return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
   }, []);
 }
 
+//Remove zeros
 function removeZeros (arr) {
   return arr.filter(function(element){
     if(element!==0){
@@ -81,23 +75,18 @@ function removeZeros (arr) {
   });
 }
 
-const finalProduct = removeZeros(flatten(immutableArray));
+//Write to JSON to see what I should filter for final view.
 
 const filePathForVals = '/Users/jcurtis/Desktop/newVal.json';
+const finalProduct = removeZeros(flatten(immutableArray));
 
 writeSyncJsonFile(filePathForVals, finalProduct);
 
-function getLMapLatLng (immuteArray, pushArr) {
-  return immuteArray.forEach((element, index, value) => {
-  })
-}
-
+//See where I am at.
 //console.log(removeZeros(immutableArray));
 
 
-/* From the deepMap library https://www.npmjs.com/package/lodash-deep
- deepMap
- */
+/* Lodash */
 
 function deepMap(obj) {
   return _.deepMapValues(obj, function (value, path) {
@@ -115,12 +104,8 @@ function mergeDimensionalArr (obj) {
   return [].concat.apply([], obj);
 }
 
-//Should break this up into files and have an structure with es6 imports.
 
-//console.log(store.riData[0][26]);
-
-//Break this out into structures next please.
-
+//ImmutableJS
 
 let immutableCollection = Immutable.Map(json);
 let immutableToJS = immutableCollection.toArray();
@@ -130,31 +115,24 @@ let immutableFrom = Immutable.fromJS(json);
 const filePathImmutableJSON = '/Users/jcurtis/Desktop/immutableJSON';
 const objForImmutale = immutableFrom;
 
-//Add in tests to assert this.
+//Add in tests to assert this, but for now just console.log values for iteration.
 
-console.log(Immutable.Map.isMap(immutableFrom));
-console.log(immutableFrom.getIn(["data", 0, 26, 1]));
+//console.log(Immutable.Map.isMap(immutableFrom));
+//console.log(immutableFrom.getIn(["data", 0, 26, 1])); Reaches inside data structure and pulls out the 0 element and the 26th index and the first value.
 
-//Logs the latitude 41.787652
 
 writeSyncJsonFile(filePathImmutableJSON, objForImmutale);
 
-function mergeImmutableDeep (coll) {
-
-  let forJS = Immutable.fromJS(coll);
-  let getNested = forJS.mergeDeep(forJS);
-
-}
-
-/* My settings would be.  const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
- * refactor this
- */
-
+// Write to JSON to see what I should filter for final view.
 const filePathRIJSON = '/Users/jcurtis/Desktop/newJson.json';
+const storeObj = store;
 
+
+//Write to sync json file and store as variable.
 function writeSyncJsonFile (file, obj) {
   return jsonfile.writeFileSync(file, obj, {spaces: 2});
 }
 
-//Write sync to disk, see the progress and iterate.
+//Write to JSON to see what I should filter for final view.
+
 writeSyncJsonFile(filePathRIJSON, storeObj);
