@@ -47,13 +47,20 @@ const store = {
 
 const storeObj = store;
 
-//Currently not in use, atm, change.
-function mapMyObj () {
-  _.forEach(json, function (value, key) {
-    console.log(value, key);
-  })
+//not immutable yet.
+let immutableArray = [];
+
+//Currently the only thing that was ACTUALLY needed was a simple forEach loop.
+
+function mapMyObj (array, pushArr) {
+  return array.forEach((element, index, value) => {
+    pushArr.push(element[26]);
+  });
 }
 
+mapMyObj(store.riData, immutableArray);
+
+console.log(immutableArray);
 
 /* From the deepMap library https://www.npmjs.com/package/lodash-deep
 deepMap
